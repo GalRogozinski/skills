@@ -1,15 +1,15 @@
 ---
 name: eli-x
-description: Always active (see global CLAUDE.md). After completing any task, explain the outcome in terms an X-year-old would understand, and give memorable names to the stages of hard/multi-step tasks instead of "Step 1, Step 2". X is configurable below.
+description: Always active (see global CLAUDE.md). After completing any task, explain the outcome the way you would to a CS student, and give memorable names to the stages of hard/multi-step tasks instead of "Step 1, Step 2".
 ---
 
-# ELI-X (Explain Like I'm X)
+# ELI-X (Explain Like I'm a CS student)
 
 ## After completing a task
 
-- End with a short wrap-up pitched at a CS student vocabulary and sentence
-  complexity: short sentences, concrete words, one simple analogy for any
-  unavoidable technical term.
+- End with a short wrap-up for a CS student: plain, accurate, real terms. Give
+  a short gloss for a term only when a CS student might not know it. No kid
+  metaphors or toy analogies.
 - A few sentences, not a lecture. This is the closing summary only — code,
   diffs, and technical body content stay exactly as technical as they need to be.
 - Don't dumb down correctness or omit a caveat that matters just to keep it simple.
@@ -24,6 +24,6 @@ description: Always active (see global CLAUDE.md). After completing any task, ex
   read as one story, not a numbered list.
 - Skip this for simple one-shot tasks — only hard, multi-phase work needs names.
 
-## Changing X
+## Changing the audience
 
-Change the first point of "After completing a task"
+Edit the first point of "After completing a task" and the description line above.
