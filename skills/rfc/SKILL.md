@@ -9,6 +9,12 @@ Generic guidance for writing RFCs (design/spec proposals) in any codebase. Adapt
 SSV Labs' SIP process, generalized so it isn't tied to one project's domain (blockchain
 consensus, slashing, etc.) or one project's file layout.
 
+## Model roles: planner and coder
+
+- **Planner:** a Mythos model if one is available, otherwise a Fable agent (`model: "fable"`) at `effort: "high"` or higher. The planner drafts and revises the RFC and owns its design decisions.
+- **Coder:** an Opus agent (`model: "opus"`) implements what the approved RFC specifies, and flags gaps instead of filling them in.
+- **When the coder is unsure** whether the RFC covers a case, it asks the planner before guessing; an ambiguity found this way is a defect to fix in the RFC. Use `SendMessage` to the planner agent, or ask through the lead if it cannot message it directly.
+
 ## 0. Detect this project's conventions first — don't impose defaults over an existing process
 
 Before drafting, check whether this repo already has an RFC-like process:

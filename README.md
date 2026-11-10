@@ -22,7 +22,7 @@ Check the source repo for newer versions.
 ## Notes on the copies
 
 - `humanizer` is the current upstream version, not an older local one.
-- `sdd` is a locally modified copy, renamed from `skill.md` to `SKILL.md` so Rakazo finds it. Its `scripts/` are not run by Rakazo, which treats GitHub skills as instructions only.
+- `sdd` is a locally modified copy (with a "Model roles" section added by Gal), renamed from `skill.md` to `SKILL.md` so Rakazo finds it. Its `scripts/` are not run by Rakazo, which treats GitHub skills as instructions only.
 - `subtask` is useless without the `subtask` CLI, and `ui-flow-gal` leans on `sdd`, `subtask` and `frontend-design`. In Rakazo they read as guidance, because bots there don't have these tools.
 - `pr-review` mentions `codex` and `/code-review`, which exist only in Claude Code setups.
 - `orchestrator` needs Claude Code's cross-session tools (`ListAgents`, `SendMessage`). Its team and ledger live in `~/.claude/orchestrator/`, not in this repo. Sessions in a different permission mode hold its messages for approval.

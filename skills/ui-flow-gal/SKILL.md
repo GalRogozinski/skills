@@ -7,6 +7,11 @@ description: Gal's end-to-end flow for any UI change (a new page, a screen, a ta
 
 One flow for every UI change. The steps run in order, and each has a gate that must pass before the next starts. Skip a step only when the owner explicitly says so.
 
+## Model roles: planner and coder
+- **Planner:** a Mythos model if one is available, otherwise a Fable agent (`model: "fable"`) at `effort: "high"` or higher. It owns steps 0-2: framing, the spec and plan, and the mock.
+- **Coder:** an Opus agent (`model: "opus"`) owns steps 3-5: the implementation lane, Playwright QA and the live check.
+- **When the coder is unsure** about the plan, the design or the scope, it asks the planner before guessing. This is the lane's advice-loop clause: use `SendMessage` to the planner agent, or ask through the lead if the planner is not reachable from the worker.
+
 ## 0. Frame it
 - Name the surface, the user, and the single job of the change.
 - Read the surface's existing design tokens and components first. **The project's design system wins** over any default.

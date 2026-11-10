@@ -50,6 +50,14 @@ tags:
 
 Guide users through GitHub's Spec-Kit for Spec-Driven Development - a methodology that flips traditional software development by making specifications executable and directly generating working implementations.
 
+## Model roles: planner and coder
+
+_Added by Gal Rogozinski; not part of the upstream skill._
+
+- **Planner:** a Mythos model if one is available, otherwise a Fable agent (`model: "fable"`) at `effort: "high"` or higher. The planner writes the spec, `plan.md` and the task breakdown.
+- **Coder:** an Opus agent (`model: "opus"`) implements the plan and does not rewrite it.
+- **When the coder is unsure** about the spec, the plan or the scope, it asks the planner before guessing. Use `SendMessage` to the planner agent; if the coder cannot message it directly, ask through the lead.
+
 ## Core Philosophy
 
 Spec-Driven Development emphasizes:
